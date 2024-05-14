@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row align-items-stretch mb-5">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase text-light">{{ title }}</h2>
+                <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 mx-auto">
+                <label for="basic-url" class="form-label text-light">Review</label>
+                <div class="input-group input-group-lg mb-3">
+                    <textarea class="form-control" rows="3" disabled>{{ review }}</textarea>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-2">
+                    <label for="basic-url" class="form-label text-light">Prediction</label>
+                    <div class="input-group input-group-lg mb-3">
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" value="{{ prediction }}" disabled>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="basic-url" class="form-label text-light">Probability</label>
+                    <div class="input-group input-group-lg mb-3">
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" value="{{ probability }}" disabled>
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            <div class="row text-center">
+                <div class="col-md-4 mx-auto">
+                    <button class="btn btn-secondary btn-sm text-uppercase" onclick="history.back()">Back</button>
+                </div>
+            </div>
+            </div>
+
+
+    </div>
+{% endblock %}
